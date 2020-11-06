@@ -5,4 +5,8 @@ class Customer < ApplicationRecord
   def self.sort_aplha
     order("name")
   end
+
+  def self.missing_email
+    where(email: [nil, ""])
+  end
 end

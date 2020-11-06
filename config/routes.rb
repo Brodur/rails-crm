@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   ActiveAdmin.routes(self)
   resource :customers, only: %i[show index]
   get "/alpha", to: "customers#alpha_sort"
+  get "/missing_email", to: "customers#missing_email"
   root to: "customers#index"
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end

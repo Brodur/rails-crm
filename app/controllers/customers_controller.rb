@@ -6,4 +6,8 @@ class CustomersController < ApplicationController
   def alpha_sort
     @customers = Customer.sort_aplha
   end
+
+  def missing_email
+    @customers = Customer.missing_email
+  end
 end
